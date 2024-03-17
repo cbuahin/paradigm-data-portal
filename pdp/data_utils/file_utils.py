@@ -39,7 +39,7 @@ def download_files(
     # download files
     for url in urls:
         if url not in skip_urls:
-            download_file(url)
+            download_file(url=url, output_path=os.path.join(output_dir, os.path.basename(url)))
 
     print()
     print('done')
